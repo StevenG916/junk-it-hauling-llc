@@ -52,6 +52,7 @@ if (form) {
         form.reset();
         btn.textContent = 'Send My Request';
         btn.disabled = false;
+        setTimeout(function() { success.style.display = 'none'; }, 6000);
       } else {
         throw new Error('Server error');
       }
@@ -59,6 +60,7 @@ if (form) {
       error.style.display = 'block';
       btn.textContent = 'Send My Request';
       btn.disabled = false;
+      setTimeout(function() { error.style.display = 'none'; }, 8000);
     }
   });
 }
